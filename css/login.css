@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
+
+body {
+  background-color: #0d0d0d;
+  font-family: 'Rubik 80s Fade', cursive;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.login-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.login__header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.login__header img {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.login__header h1 {
+  color: #32c12f;
+  font-size: 1.5em;
+}
+
+.login__input {
+  border: 2px solid#32c12f;
+  border-radius: 8px;
+  color:#32c12f;
+  font-size: 1em;
+  margin-bottom: 15px;
+  max-width: 300px;
+  outline: none;
+  padding: 15px;
+  width: 100%;
+}
+
+.login__button {
+  background-color: #0d1ad1;
+  border: 3px solid #df2828;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  max-width: 300px;
+  padding: 15px;
+  width: 100%;
+}
+
+.login__button:disabled {
+  background-color: #eee;
+  border: 2px solid #969595;
+  color: #aaa;
+  cursor: auto;
+}

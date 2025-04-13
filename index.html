@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CONSTELAÇÃO DO CÉU</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      font-family: 'Orbitron', sans-serif;
+      background: url('/imagens/fundo.png') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: brightness(0.7);
+    }
+
+    .login-container {
+      background-color: #003b46; /* azul escuro sólido */
+      border: 3px solid #00ff9d; /* verde neon sólido */
+      border-radius: 12px;
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 420px;
+    }
+
+    .login-container h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 2.5rem;
+      color: #00ff9d;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 2px solid #00ff9d;
+      background-color: #002f35;
+      color: #ffffff;
+      font-size: 1.1rem;
+    }
+
+    .login-container input:focus {
+      outline: none;
+      border-color: #00ff9d;
+      background-color: #004950;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 15px;
+      background-color: #ff0033; /* vermelho sólido */
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.2rem;
+      cursor: pointer;
+      letter-spacing: 2px;
+    }
+
+    .login-container button:hover {
+      background-color: #cc002a;
+    }
+
+    @media (max-width: 480px) {
+      .login-container h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form class="login-container" id="login-form">
+    <h1>CONSTELAÇÃO DO CÉU</h1>
+    <input type="text" placeholder="Usuário" id="username" required />
+    <input type="password" placeholder="Senha" id="password" required />
+    <button type="submit">LOGIN</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('login-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      if (username.length > 2) {
+        localStorage.setItem('username', username);
+        window.location.href = 'mata.html';
+      } else {
+        alert("Nome de usuário muito curto.");
+      }
+    });
+  </script>
+</body>
+</html>
