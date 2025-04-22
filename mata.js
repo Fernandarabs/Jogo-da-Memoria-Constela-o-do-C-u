@@ -9,7 +9,7 @@ const characters = [
 ];
 
 const characterImages = {
-   'Lyra': ['Lyra.png', 'Lyra.png'],
+   'Lyra': ['./imagens/Lyra.png', 'Lyra.png'],
    'Orion': ['Orion.png', 'Orion.png'],
    'windy': ['windy.png', 'windy.png'],
    'Sky': ['Sky.png', 'Sky.png'],
